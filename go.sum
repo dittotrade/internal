@@ -1,0 +1,6 @@
+github.com/dmitrymomot/go-env v0.1.1 h1:Yx7gev20j7zMA1LW/GMBrdJx2PQQy7/LY7tkWGKhGcM=
+github.com/dmitrymomot/go-env v0.1.1/go.mod h1:NM1eMH8iEskjkdd78BIBqK4PH7XC7tnAwW4i++62uLM=
+github.com/google/uuid v1.3.0 h1:t6JiXgmwXMjEs8VusXIJk2BXHsn+wx8BZdTaoZ5fu7I=
+github.com/google/uuid v1.3.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/keighl/postmark v0.0.0-20190821160221-28358b1a94e3 h1:J/fzo/5aWuJBtoi82KCJH4jnNYmVlnaIQC9nFI8KMeU=
+github.com/keighl/postmark v0.0.0-20190821160221-28358b1a94e3/go.mod h1:Pz+php+2qQ4fWYwCa5O/rcnovTT2ylkKg3OnMLuFUbg=
