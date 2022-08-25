@@ -1,7 +1,7 @@
 package db
 
 import (
-	"database/sql"
+	"github.com/jmoiron/sqlx"
 	"strconv"
 	"strings"
 	"sync"
@@ -19,12 +19,12 @@ func GetPlaceHolders(countArgs int) string {
 
 // maps fnName to prepared statement, reduces time to compile
 var (
-	preparedStmt = make(map[string]*sql.Stmt)
+	preparedStmt = make(map[string]*sqlx.Stmt)
 	psMu         sync.RWMutex
 )
 
 // CachePrepared avoid compilation of the same sql statement several times
-func CachePrepared(db *sql.DB, query string) (stm *sql.Stmt, err error) {
+func CachePrepared(db *sqlx.DB, query string) (stm *sqlx.Stmt, err error) {
 	psMu.RLock()
 	stm, ok := preparedStmt[query]
 	psMu.RUnlock()
@@ -33,7 +33,7 @@ func CachePrepared(db *sql.DB, query string) (stm *sql.Stmt, err error) {
 	}
 	// it takes some time to prepare statement
 	// don't block preparedStmt while we are doing this
-	stm, err = db.Prepare(query)
+	stm, err = db.Preparex(query)
 	if err != nil {
 		return
 	}
