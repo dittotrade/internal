@@ -1,5 +1,10 @@
 # internal
-modules used for dittotrade services among different repositories
+modules used for dittotrade services
+
+Packages from this module are used among different dittotrade services.
+Due problems with using it as a private repository for now it has been made public.
+WARNING: don't put any secrets, passwords to this module!
+It is used only as a way to share the CODE specific to dittotrade projects.
 
 Should be imported into service repository with 
 go get github.com/dittotrade/internal
