@@ -21,7 +21,7 @@ type (
 		StopLoss       float64
 		Equity         float64
 	}
-	DBMockup struct {
+	Mockup struct {
 		ExchangeAccounts []*ExchangeAccount
 		Users            []*User
 		TradingAccounts  []*TradingAccount
@@ -31,7 +31,7 @@ type (
 	}
 )
 
-func (dbm *DBMockup) NewTradingAccount() *TradingAccount {
+func (dbm *Mockup) NewTradingAccount() *TradingAccount {
 	if !dbm.transactionUnderway {
 		dbm.cc++
 		dbm.transactionUnderway = true
@@ -44,7 +44,7 @@ func (dbm *DBMockup) NewTradingAccount() *TradingAccount {
 	return &tradingAccount
 }
 
-func (dbm *DBMockup) NewUser() *User {
+func (dbm *Mockup) NewUser() *User {
 	if !dbm.transactionUnderway {
 		dbm.cc++
 		dbm.transactionUnderway = true
@@ -57,7 +57,7 @@ func (dbm *DBMockup) NewUser() *User {
 	return &user
 }
 
-func (dbm *DBMockup) NewExchangeAccount() *ExchangeAccount {
+func (dbm *Mockup) NewExchangeAccount() *ExchangeAccount {
 	if !dbm.transactionUnderway {
 		dbm.cc++
 		dbm.transactionUnderway = true
