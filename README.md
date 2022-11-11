@@ -11,7 +11,12 @@ go get github.com/dittotrade/internal
 
 When adding new functionality consider increase tag after commit:
 git tag
-git tag 1.3.0
+git tag v1.3.0
 git push
+git push origin v1.3.1
+
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:dittotrade/internal.git
+* [new tag]         v1.3.1 -> v1.3.1
 
 See https://go.dev/blog/publishing-go-modules for details on versioning
