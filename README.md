@@ -8,3 +8,10 @@ It is used only as a way to share the CODE specific to dittotrade projects.
 
 Should be imported into service repository with 
 go get github.com/dittotrade/internal
+
+When adding new functionality consider increase tag after commit:
+git tag
+git tag 1.3.0
+git push
+
+See https://go.dev/blog/publishing-go-modules for details on versioning
